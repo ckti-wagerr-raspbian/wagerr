@@ -215,7 +215,7 @@ parts:
       cd ${SNAPCRAFT_PART_BUILD}
       echo "Configure and build ${BINPREF}"
       ./autogen.sh
-      ./configure --prefix=`pwd`/depends/${HOST}
+      ./configure --prefix=`pwd`/depends/${HOST} --disable-ccache --disable-maintainer-mode --disable-dependency-tracking
       echo "-----------------------------------------------"
       echo "+++++++++++++++++++++++++++++++++++++++++++++++"
       echo "COMPILATION OF ${BINPREF}-${SNAPCRAFT_PROJECT_VERSION}" # run make to compile using -j
