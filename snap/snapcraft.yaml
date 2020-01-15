@@ -50,7 +50,12 @@ description: |
 grade: devel
 confinement: strict
 architectures:
- - build-on: [s390x, ppc64el, arm64, armhf, amd64, i386]
+ - build-on: s390x
+ - build-on: ppc64el
+ - build-on: arm64
+ - build-on: armhf
+ - build-on: amd64
+ - build-on: i386
 apps:
   daemon:
     command: wagerrd
